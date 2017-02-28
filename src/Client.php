@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model
 {
+    use Uuids;
+
+    public $incrementing = false;
+
     /**
      * The database table used by the model.
      *

@@ -1,10 +1,8 @@
-# Laravel Passport
+# Laravel Passport (Client UUID)
 
-[![Build Status](https://travis-ci.org/laravel/passport.svg)](https://travis-ci.org/laravel/passport)
-[![Total Downloads](https://poser.pugx.org/laravel/passport/d/total.svg)](https://packagist.org/packages/laravel/passport)
-[![Latest Stable Version](https://poser.pugx.org/laravel/passport/v/stable.svg)](https://packagist.org/packages/laravel/passport)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/passport/v/unstable.svg)](https://packagist.org/packages/laravel/passport)
-[![License](https://poser.pugx.org/laravel/passport/license.svg)](https://packagist.org/packages/laravel/passport)
+## Fork Details
+
+This is a fork of [laravel/passport](https://github.com/laravel/passport) where the oauth_client.id field has been converted to a UUID type.
 
 ## Introduction
 
