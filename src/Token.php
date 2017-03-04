@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Token extends Model
 {
+    use Uuids;
+
     /**
      * The database table used by the model.
      *
@@ -19,6 +21,13 @@ class Token extends Model
      * @var bool
      */
     public $incrementing = false;
+
+    /**
+     * The uuid key used by the model.
+     *
+     * @var bool
+     */
+    public $uuidKey = 'token_id';
 
     /**
      * The guarded attributes on the model.
