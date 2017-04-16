@@ -17,7 +17,8 @@ class CheckClientCredentialsTest extends PHPUnit_Framework_TestCase
         $psr->shouldReceive('getAttribute')->with('oauth_user_id')->andReturn(1);
         $psr->shouldReceive('getAttribute')->with('oauth_client_id')->andReturn(1);
         $psr->shouldReceive('getAttribute')->with('oauth_access_token_id')->andReturn('token');
-
+        $psr->shouldReceive('getAttribute')->with('oauth_scopes')->andReturn(['*']);
+        
         $middleware = new CheckClientCredentials($resourceServer);
 
         $request = Request::create('/');
@@ -53,7 +54,7 @@ class CheckClientCredentialsTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException Illuminate\Auth\AuthenticationException
+     * @expectedException \Laravel\Passport\Exceptions\MissingScopeException
      */
     public function test_exception_is_thrown_if_token_does_not_have_required_scopes()
     {
